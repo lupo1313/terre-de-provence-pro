@@ -11,10 +11,7 @@
       </nav>
 
       <div class="header-actions">
-        <a class="pill pill--phone" href="tel:{{nap.phoneLink}}">
-          <span class="pill-ico" aria-hidden="true">✆</span>
-          <span class="pill-txt"><span class="pill-num">{{nap.phoneDisplay}}</span><span class="pill-sub">Appeler la boutique</span></span>
-        </a>
+        <a class="header-call" href="tel:{{nap.phoneLink}}">✆ {{nap.phoneDisplay}} <span>Appeler</span></a>
         <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
           <span></span><span></span><span></span>
         </button>
@@ -25,10 +22,10 @@
       <ul>
         {{nav}}
       </ul>
-      <div class="mobile-nav-contact">
-        <p>{{nap.streetAddress}}, {{nap.postalCode}} {{nap.addressLocality}}</p>
-        <p>{{hours.label}}</p>
-      </div>
+      <a class="call mobile-nav-call" href="tel:{{nap.phoneLink}}">
+        <span class="ico" aria-hidden="true">✆</span>
+        <span class="t"><b>{{nap.phoneDisplay}}</b><span>Appeler la boutique</span></span>
+      </a>
     </nav>
   </header>
 
