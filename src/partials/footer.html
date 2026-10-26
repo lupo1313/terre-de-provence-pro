@@ -1,0 +1,47 @@
+  </main>
+
+  <!-- Barre d'action fixe mobile -->
+  <div class="mobile-cta" aria-label="Actions rapides">
+    <a class="mcta mcta--call" href="tel:{{nap.phoneLink}}"><span aria-hidden="true">✆</span> Appeler</a>
+    <a class="mcta mcta--map" href="{{nap.mapsDirUrl}}" target="_blank" rel="noopener"><span aria-hidden="true">➜</span> Itinéraire</a>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/img/logo-horizontal-creme.webp" alt="Terre de Provence" width="190" height="52" loading="lazy">
+        <p class="footer-tag">{{site.tagline}}</p>
+        <p class="footer-note">Commerce de quartier à Endoume, Marseille, depuis plus de 30 ans.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Pages du site">
+        <h2>Le site</h2>
+        <ul>
+          {{footerNav}}
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h2>Nous trouver</h2>
+        <address>
+          {{nap.streetAddress}}<br>
+          {{nap.postalCode}} {{nap.addressLocality}}<br>
+          <a href="tel:{{nap.phoneLink}}">{{nap.phoneDisplay}}</a>
+        </address>
+        <p class="footer-hours">{{hours.label}}</p>
+        <a class="footer-maps" href="{{nap.mapsDirUrl}}" target="_blank" rel="noopener">Voir l'itinéraire →</a>
+      </div>
+
+      <nav class="footer-col" aria-label="Informations légales">
+        <h2>Informations</h2>
+        <ul>
+          {{legalLinks}}
+        </ul>
+      </nav>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <p>© {{year}} {{site.name}} — Tous droits réservés.</p>
+      <p class="footer-made">Primeur &amp; épicerie fine · 26 rue d'Endoume, Marseille 7e</p>
+    </div>
+  </footer>

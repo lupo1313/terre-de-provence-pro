@@ -1,0 +1,127 @@
+{
+  "site": {
+    "name": "Terre de Provence",
+    "tagline": "Primeur & épicerie fine à Endoume, Marseille",
+    "baseUrl": "https://lupo1313.github.io/terre-de-provence-pro",
+    "pathPrefix": "/terre-de-provence-pro",
+    "locale": "fr_FR",
+    "lang": "fr",
+    "themeColor": "#00261B"
+  },
+  "nap": {
+    "streetAddress": "26 rue d'Endoume",
+    "postalCode": "13007",
+    "addressLocality": "Marseille",
+    "addressRegion": "Provence-Alpes-Côte d'Azur",
+    "country": "FR",
+    "phoneDisplay": "04 91 33 85 68",
+    "phoneLink": "+33491338568",
+    "mapsDirUrl": "https://www.google.com/maps/dir/?api=1&destination=26%20rue%20d'Endoume%2013007%20Marseille",
+    "mapsPlaceUrl": "https://www.google.com/maps/search/?api=1&query=26%20rue%20d'Endoume%2013007%20Marseille",
+    "geo": { "lat": "", "lng": "" }
+  },
+  "hours": {
+    "label": "Tous les jours, 7h00 – 20h30",
+    "spec": [
+      { "days": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "open": "07:00", "close": "20:30" }
+    ],
+    "openHour": 7,
+    "openMinute": 0,
+    "closeHour": 20,
+    "closeMinute": 30
+  },
+  "legal": {
+    "company": "RZOUGA",
+    "form": "SARL",
+    "capital": "20 000 €",
+    "siren": "754 025 161",
+    "siret": "754 025 161 00011",
+    "ape": "4721Z",
+    "rcs": "Marseille 754 025 161",
+    "created": "26/09/2012",
+    "tva": "À VÉRIFIER",
+    "director": "À VÉRIFIER",
+    "email": "À VÉRIFIER",
+    "host": "À VÉRIFIER",
+    "mediator": "À VÉRIFIER"
+  },
+  "nav": ["accueil", "notre-histoire", "nos-produits", "la-boutique", "nous-trouver"],
+  "footerExtra": ["mentions-legales", "politique-confidentialite"],
+  "pages": {
+    "accueil": {
+      "slug": "",
+      "navLabel": "Accueil",
+      "title": "Terre de Provence — Primeur & épicerie fine à Endoume, Marseille 7e",
+      "description": "Votre primeur et épicerie fine au cœur d'Endoume, à Marseille. Fruits et légumes de saison, fromages, olives, épicerie fine. Ouvert tous les jours, 7h-20h30.",
+      "h1": "Votre primeur & épicerie fine à Endoume",
+      "ogImage": "/assets/img/devanture-1600.webp",
+      "breadcrumb": "Accueil"
+    },
+    "notre-histoire": {
+      "slug": "notre-histoire",
+      "navLabel": "Notre histoire",
+      "title": "Notre histoire — un commerce de quartier à Endoume depuis plus de 30 ans",
+      "description": "L'histoire de Terre de Provence, commerce de proximité du quartier d'Endoume à Marseille depuis plus de 30 ans, anciennement La Clé des Champs.",
+      "h1": "Une histoire de quartier à Endoume",
+      "ogImage": "/assets/img/abbaye-desktop.webp",
+      "breadcrumb": "Notre histoire"
+    },
+    "nos-produits": {
+      "slug": "nos-produits",
+      "navLabel": "Nos produits",
+      "title": "Nos produits — fruits et légumes, fromages, olives, épicerie fine | Endoume",
+      "description": "Les six univers de Terre de Provence à Endoume : fruits et légumes de saison, fromages, olives, épicerie fine, produits secs et jus. Marseille 13007.",
+      "h1": "Nos produits : six univers de saison",
+      "ogImage": "/assets/img/primeur-1100.webp",
+      "breadcrumb": "Nos produits"
+    },
+    "la-boutique": {
+      "slug": "la-boutique",
+      "navLabel": "La boutique",
+      "title": "La boutique en images — Terre de Provence, Endoume Marseille",
+      "description": "Découvrez en images la boutique Terre de Provence à Endoume : la devanture, les étals de saison et l'ambiance d'un vrai commerce de quartier à Marseille.",
+      "h1": "La boutique en images",
+      "ogImage": "/assets/img/devanture-1600.webp",
+      "breadcrumb": "La boutique"
+    },
+    "nous-trouver": {
+      "slug": "nous-trouver",
+      "navLabel": "Nous trouver",
+      "title": "Nous trouver — 26 rue d'Endoume, Marseille 7e | horaires & accès",
+      "description": "Adresse, horaires et itinéraire de Terre de Provence : 26 rue d'Endoume, 13007 Marseille. Ouvert tous les jours de 7h00 à 20h30. Tél. 04 91 33 85 68.",
+      "h1": "Nous trouver à Endoume, Marseille 7e",
+      "ogImage": "/assets/img/devanture-1600.webp",
+      "breadcrumb": "Nous trouver"
+    },
+    "mentions-legales": {
+      "slug": "mentions-legales",
+      "navLabel": "Mentions légales",
+      "title": "Mentions légales — Terre de Provence",
+      "description": "Mentions légales du site Terre de Provence, 26 rue d'Endoume, 13007 Marseille.",
+      "h1": "Mentions légales",
+      "ogImage": "/assets/img/devanture-1600.webp",
+      "breadcrumb": "Mentions légales",
+      "noindex": false
+    },
+    "politique-confidentialite": {
+      "slug": "politique-confidentialite",
+      "navLabel": "Politique de confidentialité",
+      "title": "Politique de confidentialité — Terre de Provence",
+      "description": "Politique de confidentialité et traitement des données personnelles du site Terre de Provence.",
+      "h1": "Politique de confidentialité",
+      "ogImage": "/assets/img/devanture-1600.webp",
+      "breadcrumb": "Politique de confidentialité",
+      "noindex": false
+    },
+    "404": {
+      "slug": "404",
+      "navLabel": "Page introuvable",
+      "title": "Page introuvable — Terre de Provence",
+      "description": "La page demandée est introuvable.",
+      "h1": "Cette page est introuvable",
+      "ogImage": "/assets/img/devanture-1600.webp",
+      "breadcrumb": "Page introuvable",
+      "noindex": true
+    }
+  }
+}

@@ -1,0 +1,35 @@
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Terre de Provence, accueil">
+        <img src="/assets/img/logo-principal.webp" alt="Terre de Provence" width="150" height="56" class="brand-logo">
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+          {{nav}}
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="pill pill--phone" href="tel:{{nap.phoneLink}}">
+          <span class="pill-ico" aria-hidden="true">✆</span>
+          <span class="pill-txt"><span class="pill-num">{{nap.phoneDisplay}}</span><span class="pill-sub">Appeler la boutique</span></span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile" hidden>
+      <ul>
+        {{nav}}
+      </ul>
+      <div class="mobile-nav-contact">
+        <p>{{nap.streetAddress}}, {{nap.postalCode}} {{nap.addressLocality}}</p>
+        <p>{{hours.label}}</p>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenu">

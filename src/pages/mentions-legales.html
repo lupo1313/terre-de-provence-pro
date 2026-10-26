@@ -1,0 +1,44 @@
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <ol><li><a href="/">Accueil</a></li><li>{{page.breadcrumb}}</li></ol>
+        </nav>
+        <p class="eyebrow">Informations légales</p>
+        <h1>{{page.h1}}</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap prose">
+        <p><em>Document de travail : les mentions suivies de <span class="todo">À VÉRIFIER</span> doivent être confirmées avec l'exploitant avant toute mise en ligne.</em></p>
+
+        <h2>Éditeur du site</h2>
+        <p>
+          {{legal.company}} — {{legal.form}} au capital de {{legal.capital}}<br>
+          Siège / établissement : {{nap.streetAddress}}, {{nap.postalCode}} {{nap.addressLocality}} <span class="todo">À VÉRIFIER (adresse du siège)</span><br>
+          RCS : {{legal.rcs}}<br>
+          SIRET : {{legal.siret}} — Code APE : {{legal.ape}}<br>
+          N° TVA intracommunautaire : <span class="todo">{{legal.tva}}</span><br>
+          Téléphone : <a href="tel:{{nap.phoneLink}}">{{nap.phoneDisplay}}</a><br>
+          Courriel : <span class="todo">{{legal.email}}</span>
+        </p>
+
+        <h2>Directeur de la publication</h2>
+        <p><span class="todo">{{legal.director}}</span> (le gérant de la société, à confirmer).</p>
+
+        <h2>Hébergeur</h2>
+        <p>
+          <span class="todo">{{legal.host}}</span><br>
+          Nom, raison sociale, adresse et téléphone de l'hébergeur à renseigner une fois l'hébergement confirmé.
+        </p>
+
+        <h2>Propriété intellectuelle</h2>
+        <p>L'ensemble des contenus de ce site (textes, photographies, logo, illustrations, mise en page) est protégé. Les photographies de la boutique et le logo sont la propriété de l'éditeur ou utilisés avec son accord. Toute reproduction, totale ou partielle, sans autorisation préalable est interdite.</p>
+
+        <h2>Médiation de la consommation</h2>
+        <p>Conformément à la réglementation, le professionnel peut être tenu de communiquer les coordonnées d'un médiateur de la consommation. <span class="todo">À VÉRIFIER</span> : adhésion et coordonnées du médiateur à préciser selon l'activité.</p>
+
+        <h2>Responsabilité</h2>
+        <p>Ce site est un site vitrine. Les informations (horaires, disponibilités des produits) sont données à titre indicatif et peuvent évoluer. Pour toute information à jour, contactez la boutique par téléphone.</p>
+      </div>
+    </section>

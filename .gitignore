@@ -1,0 +1,7 @@
+# Staging de conversion d'images (sources lourdes, non nécessaires au site)
+src/assets/img/_raw/
+
+# Divers
+.DS_Store
+Thumbs.db
+node_modules/

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lupo1313.github.io/terre-de-provence-pro/sitemap.xml
