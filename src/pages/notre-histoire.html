@@ -1,50 +1,36 @@
-    <section class="page-hero">
-      <div class="wrap">
-        <nav class="breadcrumb" aria-label="Fil d'Ariane">
-          <ol><li><a href="/">Accueil</a></li><li>{{page.breadcrumb}}</li></ol>
-        </nav>
-        <p class="eyebrow">Depuis plus de 30 ans</p>
-        <h1>{{page.h1}}</h1>
-        <p>Un commerce de proximité installé rue d'Endoume, à Marseille, qui fait vivre le quartier au rythme des saisons.</p>
+    <section class="page-intro with-media">
+      <div class="wrap intro-media">
+        <div>
+          <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <ol><li><a href="/">Accueil</a></li><li>{{page.breadcrumb}}</li></ol>
+          </nav>
+          <p class="eyebrow">Depuis plus de 30 ans</p>
+          <h1>{{page.h1}}</h1>
+          <p class="lede">Un commerce de proximité installé rue d'Endoume, au rythme des saisons et des habitués.</p>
+        </div>
+        <figure class="intro-figure">
+          <img src="/assets/img/abbaye-desktop.webp"
+               srcset="/assets/img/abbaye-mobile.webp 700w, /assets/img/abbaye-desktop.webp 1400w"
+               sizes="(max-width:860px) 92vw, 48vw"
+               width="1400" height="900" fetchpriority="high" decoding="async"
+               alt="Illustration à l'aquarelle du quartier d'Endoume, aux abords de l'abbaye Saint-Victor, à Marseille.">
+          <figcaption>Le quartier d'Endoume, aux abords de l'abbaye Saint-Victor</figcaption>
+        </figure>
       </div>
     </section>
 
     <section class="section">
-      <div class="wrap histoire-inner">
-        <figure class="histoire-figure">
-          <img src="/assets/img/abbaye-desktop.webp"
-               srcset="/assets/img/abbaye-mobile.webp 700w, /assets/img/abbaye-desktop.webp 1400w"
-               sizes="(max-width:860px) 92vw, 48vw"
-               width="1400" height="900" loading="lazy" decoding="async"
-               alt="Illustration à l'aquarelle du quartier d'Endoume et de l'abbaye Saint-Victor, à Marseille.">
-          <figcaption>Le quartier d'Endoume, aux abords de l'abbaye Saint-Victor</figcaption>
-        </figure>
-        <div class="histoire-copy prose">
-          <p class="eyebrow">Le lieu</p>
-          <h2>Un primeur ancré dans Endoume</h2>
-          <p>Terre de Provence occupe depuis longtemps la même adresse, au 26 rue d'Endoume. Le commerce était autrefois connu sous le nom de « La Clé des Champs ». Depuis plus de trente ans, cette boutique de quartier accueille les habitants pour leurs courses du quotidien, entre primeur et épicerie fine.</p>
-          <p>D'une génération de clients à l'autre, l'esprit reste le même : des étals renouvelés au fil des arrivages, des produits de saison, et le conseil d'un commerce à taille humaine.</p>
-        </div>
+      <div class="wrap prose">
+        <p class="lede">La boutique occupe la même adresse, au 26 rue d'Endoume, depuis plus de trente ans. Elle s'appelait autrefois « La Clé des Champs ».</p>
+        <p>Le quartier a ses habitudes : on vient y chercher les fruits et légumes de la semaine, un fromage, quelques olives, de quoi compléter le panier. L'assortiment change au fil de l'année, c'est la saison qui donne le ton des étals. Rien n'est figé comme dans un rayon de grande surface.</p>
+        <p>Ce qui ne change pas, c'est la façon de faire : un commerce à taille humaine, le conseil quand on en a besoin, et l'habitude de passer dire bonjour autant que de faire ses courses.</p>
       </div>
     </section>
 
     <section class="section section--creme2">
       <div class="wrap prose center">
-        <p class="eyebrow">Un commerce de proximité</p>
-        <h2>Le quotidien au rythme des saisons</h2>
-        <p>Ici se côtoient les fruits et légumes de saison, les fromages, les olives, l'épicerie fine, les produits secs et les jus. Un assortiment qui évolue au fil de l'année, pensé pour la vie de quartier plutôt que pour le rayon figé d'une grande surface.</p>
-        <p>C'est cette proximité, et la régularité d'un commerce ouvert tous les jours, qui font de Terre de Provence un repère d'Endoume.</p>
-      </div>
-    </section>
-
-    <section class="section cta-final">
-      <div class="wrap">
-        <p class="eyebrow eyebrow--light">Venez nous rencontrer</p>
-        <h2>26 rue d'Endoume, Marseille 7e</h2>
-        <p>Ouvert tous les jours de 7h00 à 20h30.</p>
-        <div class="btn-row">
-          <a class="btn btn--primary" href="tel:{{nap.phoneLink}}">✆ {{nap.phoneDisplay}}</a>
-          <a class="btn btn--on-dark" href="/nous-trouver/">Nous trouver →</a>
-        </div>
+        <h2>Un repère du quartier</h2>
+        <p>D'une génération de clients à l'autre, Terre de Provence est restée ce qu'elle était : un primeur et une épicerie fine de quartier, ouverts tous les jours. Le meilleur moyen de la connaître, c'est encore d'y passer.</p>
+        <p><a class="textlink" href="/nous-trouver/">Nous trouver et venir nous voir</a></p>
       </div>
     </section>

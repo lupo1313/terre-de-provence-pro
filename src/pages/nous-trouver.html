@@ -1,11 +1,11 @@
-    <section class="page-hero">
+    <section class="page-intro">
       <div class="wrap">
         <nav class="breadcrumb" aria-label="Fil d'Ariane">
           <ol><li><a href="/">Accueil</a></li><li>{{page.breadcrumb}}</li></ol>
         </nav>
         <p class="eyebrow">Adresse &amp; accès</p>
         <h1>{{page.h1}}</h1>
-        <p>Au 26 rue d'Endoume, en plein cœur du quartier. Ouvert tous les jours, de 7h00 à 20h30.</p>
+        <p class="lede">Au 26 rue d'Endoume, en plein cœur du quartier. Ouvert tous les jours, de 7h00 à 20h30.</p>
       </div>
     </section>
 
@@ -40,8 +40,8 @@
             </div>
           </div>
 
-          <div class="btn-row">
-            <a class="btn btn--primary" href="tel:{{nap.phoneLink}}">✆ Appeler la boutique</a>
+          <div class="actions card-actions">
+            <a class="call" href="tel:{{nap.phoneLink}}" aria-label="Appeler la boutique au {{nap.phoneDisplay}}">{{nap.phoneDisplay}}</a>
           </div>
         </div>
 

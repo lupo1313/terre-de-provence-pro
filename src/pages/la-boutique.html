@@ -1,11 +1,11 @@
-    <section class="page-hero">
+    <section class="page-intro">
       <div class="wrap">
         <nav class="breadcrumb" aria-label="Fil d'Ariane">
           <ol><li><a href="/">Accueil</a></li><li>{{page.breadcrumb}}</li></ol>
         </nav>
         <p class="eyebrow">En images</p>
         <h1>{{page.h1}}</h1>
-        <p>Des photographies réelles de la boutique : la devanture rue d'Endoume, les étals de saison et l'ambiance d'un vrai commerce de quartier.</p>
+        <p class="lede">Des photographies réelles de la boutique : la devanture rue d'Endoume, les étals de saison et l'allure d'un vrai commerce de quartier.</p>
       </div>
     </section>
 
@@ -30,14 +30,18 @@
       </div>
     </section>
 
-    <section class="section cta-final">
-      <div class="wrap">
-        <p class="eyebrow eyebrow--light">Le mieux, c'est sur place</p>
-        <h2>Poussez la porte</h2>
-        <p>{{nap.streetAddress}}, {{nap.postalCode}} {{nap.addressLocality}}. Ouvert tous les jours, 7h–20h30.</p>
-        <div class="btn-row">
-          <a class="btn btn--primary" href="tel:{{nap.phoneLink}}">✆ {{nap.phoneDisplay}}</a>
-          <a class="btn btn--on-dark" href="{{nap.mapsDirUrl}}" target="_blank" rel="noopener">Itinéraire →</a>
+    <section class="visite section">
+      <div class="wrap visite-inner">
+        <div>
+          <p class="eyebrow">Le mieux, c'est sur place</p>
+          <h2>Poussez la porte</h2>
+          <p>On est au 26 rue d'Endoume, à Marseille 7e, ouvert tous les jours de 7h00 à 20h30.</p>
+        </div>
+        <div>
+          <div class="actions">
+            <a class="call" href="tel:{{nap.phoneLink}}" aria-label="Appeler la boutique au {{nap.phoneDisplay}}">{{nap.phoneDisplay}}</a>
+            <a class="textlink" href="{{nap.mapsDirUrl}}" target="_blank" rel="noopener">Itinéraire</a>
+          </div>
         </div>
       </div>
     </section>
