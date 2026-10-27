@@ -2,6 +2,22 @@
 (function () {
   'use strict';
 
+  /* ---- Menu mobile (burger) ---- */
+  (function () {
+    var toggle = document.getElementById('menu-toggle');
+    var panel = document.getElementById('menu-mobile');
+    if (!toggle || !panel) return;
+    function set(open) {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+      panel.hidden = !open;
+    }
+    toggle.addEventListener('click', function () { set(toggle.getAttribute('aria-expanded') !== 'true'); });
+    panel.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 760) set(false); });
+  })();
+
   /* ---- Badge Ouvert / Fermé (tous les jours 07:00–20:30) ---- */
   var OPEN = 7 * 60, CLOSE = 20 * 60 + 30;
   function pad(n) { return (n < 10 ? '0' : '') + n; }
