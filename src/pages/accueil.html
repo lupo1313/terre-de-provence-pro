@@ -1,106 +1,104 @@
-    <!-- HERO -->
     <section class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Primeur &amp; épicerie fine — Endoume, Marseille</p>
-          <h1>Les saisons passent par la <em>rue d'Endoume.</em></h1>
-          <p class="lede">Primeur et épicerie fine au cœur d'Endoume : fruits et légumes de saison, fromages, olives, produits secs et jus. Pour une disponibilité, appelez la boutique.</p>
-          <div class="hero-actions">
-            <a class="call" href="tel:{{nap.phoneLink}}" aria-label="Appeler la boutique au {{nap.phoneDisplay}}">{{nap.phoneDisplay}}</a>
-            <a class="textlink" href="#rayons">Voir nos rayons</a>
-          </div>
-        </div>
-        <figure class="hero-figure">
-          <img src="/assets/img/devanture-900.webp"
-               srcset="/assets/img/devanture-480.webp 480w, /assets/img/devanture-900.webp 900w, /assets/img/devanture-1600.webp 1600w"
-               sizes="(max-width:860px) 92vw, 50vw"
-               width="1600" height="900" fetchpriority="high" decoding="async"
-               alt="La devanture de Terre de Provence, 26 rue d'Endoume à Marseille, avec ses étals de fruits et légumes.">
-          <figcaption>La devanture, 26 rue d'Endoume</figcaption>
-        </figure>
+      <img class="hero-bg" src="/assets/img/devanture-900.webp"
+           srcset="/assets/img/devanture-480.webp 480w, /assets/img/devanture-900.webp 900w, /assets/img/devanture-1600.webp 1600w"
+           sizes="100vw" width="1600" height="900" fetchpriority="high"
+           alt="La devanture de Terre de Provence, 26 rue d'Endoume, avec ses étals de fruits et légumes.">
+      <div class="sign">
+        <p class="sign-sur">Primeur &amp; épicerie fine, 26 rue d'Endoume</p>
+        <h1>Les saisons passent<br>par la rue d'Endoume</h1>
+        <p class="sign-sub">Fruits et légumes de saison, fromages, olives et épicerie fine. Ouvert tous les jours de 7h à 20h30.</p>
+        <div class="sign-acts"><a class="btn" href="tel:{{nap.phoneLink}}">Appeler la boutique</a><a class="lien lien--clair" href="#rayons">Voir nos rayons</a></div>
       </div>
     </section>
 
-    <!-- NOS RAYONS -->
-    <section class="rayons section" id="rayons">
+    <section class="rayons rayons--eventail" id="rayons" aria-labelledby="rayons-titre">
       <div class="wrap">
-        <div class="head">
-          <div>
-            <p class="eyebrow">En boutique</p>
-            <h2>Nos rayons</h2>
+        <div class="rayons-head"><h2 id="rayons-titre">Nos rayons</h2><a class="lien" href="/nos-produits/">Tout voir</a></div>
+        <div class="eventail-grille">
+          <div class="pile" tabindex="0" role="group" aria-roledescription="jeu de cartes" aria-label="Nos rayons, flèches gauche et droite pour changer de rayon">
+            <div class="carte-pile" data-titre="Fruits et légumes" data-texte="De saison, au fil des arrivages." data-href="/nos-produits/#fruits-legumes"><img class="pos-fl" src="/assets/img/lieu-1100.webp" alt="Étal d'agrumes, de pommes et d'ananas dans la boutique." decoding="async"><span class="titre">Fruits et légumes</span></div><div class="carte-pile" data-titre="Fromages" data-texte="À la coupe et en libre-service." data-href="/nos-produits/#fromages"><img class="pos-fro" src="/assets/img/fromages-desktop.webp" alt="Vitrine réfrigérée de fromages à la coupe et en libre-service." decoding="async"><span class="titre">Fromages</span></div><div class="carte-pile" data-titre="Olives" data-texte="Au détail, accent méditerranéen." data-href="/nos-produits/#olives"><img class="pos-oli" src="/assets/img/olives-1100.webp" alt="Bacs d'olives au détail devant les étagères de bocaux et de bouteilles." decoding="async"><span class="titre">Olives</span></div><div class="carte-pile" data-titre="Épicerie fine" data-texte="Spécialités, condiments, douceurs." data-href="/nos-produits/#epicerie-fine"><img class="pos-epi" src="/assets/img/epicerie-fine-desktop.webp" alt="Étagère d'amaretti, de grissini et de spécialités d'épicerie fine." decoding="async"><span class="titre">Épicerie fine</span></div><div class="carte-pile" data-titre="Produits secs" data-texte="Fruits secs et spécialités à grignoter." data-href="/nos-produits/#produits-secs"><picture><source type="image/avif" srcset="/assets/img/rayon-produits-secs-450.avif 450w, /assets/img/rayon-produits-secs-600.avif 600w, /assets/img/rayon-produits-secs-720.avif 720w" sizes="(max-width:760px) 230px, 300px"><img src="/assets/img/rayon-produits-secs-600.webp" srcset="/assets/img/rayon-produits-secs-450.webp 450w, /assets/img/rayon-produits-secs-600.webp 600w, /assets/img/rayon-produits-secs-720.webp 720w" sizes="(max-width:760px) 230px, 300px" width="600" height="816" alt="Rayonnage de grissini, biscuits, taralli et autres spécialités à grignoter." decoding="async"></picture><span class="titre">Produits secs</span></div><div class="carte-pile" data-titre="Jus" data-texte="Jus de fruits et boissons." data-href="/nos-produits/#jus"><picture><source type="image/avif" srcset="/assets/img/rayon-jus-450.avif 450w, /assets/img/rayon-jus-600.avif 600w, /assets/img/rayon-jus-900.avif 900w" sizes="(max-width:760px) 230px, 300px"><img src="/assets/img/rayon-jus-600.webp" srcset="/assets/img/rayon-jus-450.webp 450w, /assets/img/rayon-jus-600.webp 600w, /assets/img/rayon-jus-900.webp 900w" sizes="(max-width:760px) 230px, 300px" width="600" height="816" alt="Étagères en bois garnies de bouteilles de jus de fruits et de boissons." decoding="async"></picture><span class="titre">Jus</span></div>
           </div>
-          <a class="textlink" href="/nos-produits/">Tout voir</a>
+          <div class="detail" aria-live="polite">
+            <h3 class="detail-titre"></h3>
+            <p class="detail-texte"></p>
+            <a class="lien" href="#"></a>
+            <div class="detail-nav">
+              <button type="button" class="nav-btn" data-pas="-1" aria-label="Rayon précédent"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+              <span class="compteur" aria-hidden="true"></span>
+              <button type="button" class="nav-btn" data-pas="1" aria-label="Rayon suivant"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+            </div>
+          </div>
         </div>
-        <nav class="rayon-list" aria-label="Nos familles de produits">
-          <a href="/nos-produits/#fruits-legumes"><span class="r-name">Fruits et légumes</span><span class="r-desc">De saison, au fil des arrivages</span><span class="r-go" aria-hidden="true">→</span></a>
-          <a href="/nos-produits/#fromages"><span class="r-name">Fromages</span><span class="r-desc">À la coupe et en libre-service</span><span class="r-go" aria-hidden="true">→</span></a>
-          <a href="/nos-produits/#olives"><span class="r-name">Olives</span><span class="r-desc">Au détail, accent méditerranéen</span><span class="r-go" aria-hidden="true">→</span></a>
-          <a href="/nos-produits/#epicerie-fine"><span class="r-name">Épicerie fine</span><span class="r-desc">Spécialités, condiments, douceurs</span><span class="r-go" aria-hidden="true">→</span></a>
-          <a href="/nos-produits/#produits-secs"><span class="r-name">Produits secs</span><span class="r-desc">Fruits secs et spécialités à grignoter</span><span class="r-go" aria-hidden="true">→</span></a>
-          <a href="/nos-produits/#jus"><span class="r-name">Jus</span><span class="r-desc">Jus de fruits et boissons</span><span class="r-go" aria-hidden="true">→</span></a>
-        </nav>
       </div>
     </section>
 
-    <!-- HISTOIRE -->
-    <section class="histoire section">
+    <section class="histoire">
       <div class="wrap histoire-inner">
-        <figure class="histoire-figure">
-          <img src="/assets/img/abbaye-desktop.webp"
-               srcset="/assets/img/abbaye-mobile.webp 700w, /assets/img/abbaye-desktop.webp 1400w"
-               sizes="(max-width:860px) 92vw, 48vw"
-               width="1400" height="900" loading="lazy" decoding="async"
-               alt="Illustration à l'aquarelle du quartier d'Endoume, aux abords de l'abbaye Saint-Victor, à Marseille.">
-          <figcaption>Le quartier d'Endoume, aux abords de l'abbaye Saint-Victor</figcaption>
-        </figure>
-        <div class="histoire-copy">
-          <p class="eyebrow">Depuis plus de 30 ans</p>
+        <figure><img src="/assets/img/abbaye-desktop.webp" alt="Aquarelle du quartier d'Endoume, aux abords de l'abbaye Saint-Victor." loading="lazy" width="1400" height="900"><figcaption>Le quartier d'Endoume, aux abords de l'abbaye Saint-Victor</figcaption></figure>
+        <div>
+          <p class="sur">Depuis plus de trente ans</p>
           <h2>Une maison de quartier</h2>
           <p>La boutique occupe la même adresse rue d'Endoume depuis plus de trente ans ; elle s'appelait autrefois « La Clé des Champs ». D'une génération de clients à l'autre, l'esprit n'a pas changé : des produits de saison, le conseil d'un commerce à taille humaine, et l'habitude de passer dire bonjour.</p>
-          <div class="hero-actions">
-            <a class="textlink" href="/notre-histoire/">Notre histoire</a>
-          </div>
+          <a class="lien" href="/notre-histoire/">Notre histoire</a>
         </div>
       </div>
     </section>
 
-    <!-- BOUTIQUE -->
-    <section class="boutique section section--creme2">
+    <section class="boutique">
       <div class="wrap">
-        <div class="head">
-          <p class="eyebrow">En images</p>
-          <h2>La boutique</h2>
-          <p class="lede">L'allure d'un vrai primeur de quartier, entre les étals de saison et les rayons d'épicerie.</p>
+        <h2>La boutique</h2>
+        <div class="galerie">
+          <img class="g-big" src="/assets/img/primeur-1100.webp" alt="Étal de fruits et légumes de saison." loading="lazy">
+          <img src="/assets/img/legumes-1100.webp" alt="Rayon de légumes : oignons nouveaux, betteraves, courges." loading="lazy">
+          <img src="/assets/img/olives-1100.webp" alt="Rayon d'olives et de bocaux." loading="lazy">
         </div>
-        <div class="boutique-grid">
-          <figure class="big"><img src="/assets/img/lieu-1100.webp" width="1100" height="825" loading="lazy" alt="Vue intérieure de la boutique et de ses rayons."></figure>
-          <figure><img src="/assets/img/primeur-640.webp" width="640" height="480" loading="lazy" alt="Étal de fruits de saison."></figure>
-          <figure><img src="/assets/img/olives-640.webp" width="640" height="853" loading="lazy" alt="Rayon d'olives et de condiments."></figure>
+        <a class="lien" href="/la-boutique/">Voir la boutique en images</a>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-titre">
+      <div class="wrap faq-grille">
+        <div class="faq-intro">
+          <h2 id="faq-titre">Questions fréquentes</h2>
+          <p>Une autre question ? Appelez la boutique, on vous répond tous les jours de 7h à 20h30.</p>
+          <a class="lien" href="tel:{{nap.phoneLink}}">Appeler le {{nap.phoneDisplay}}</a>
         </div>
-        <div class="actions">
-          <a class="textlink" href="/la-boutique/">Voir la boutique en images</a>
+        <div class="faq-liste">
+          <details class="faq-item" open>
+            <summary><span>Quels sont vos horaires d'ouverture ?</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>La boutique est ouverte tous les jours, du lundi au dimanche, de 7h à 20h30, y compris le dimanche.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span>Où se trouve la boutique ?</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>Au 26 rue d'Endoume, dans le 7e arrondissement de Marseille, au cœur du quartier d'Endoume. <a class="lien" href="{{nap.mapsDirUrl}}" target="_blank" rel="noopener">Voir l'itinéraire</a></p>
+          </details>
+          <details class="faq-item">
+            <summary><span>Comment savoir si un produit est disponible ?</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>Les arrivages changent avec les saisons. Le plus simple est d'appeler la boutique au <a class="lien" href="tel:{{nap.phoneLink}}">{{nap.phoneDisplay}}</a>.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span>Que <span class="nw">trouve-t-on</span> chez Terre de Provence ?</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>Des fruits et légumes de saison, des fromages à la coupe et en libre-service, des olives au détail, de l'épicerie fine, des produits secs et des jus de fruits.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span>Depuis quand la boutique <span class="nw">existe-t-elle</span> ?</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>Depuis plus de trente ans, à la même adresse de la rue d'Endoume. Elle s'appelait autrefois « La Clé des Champs ».</p>
+          </details>
         </div>
       </div>
     </section>
 
-    <!-- VISITE -->
-    <section class="visite section">
-      <div class="wrap visite-inner">
+    <section class="contact" aria-labelledby="contact-titre">
+      <div class="wrap contact-inner">
         <div>
-          <p class="eyebrow">Passez nous voir</p>
-          <h2>Ouvert tous les jours, 7h&nbsp;–&nbsp;20h30</h2>
-          <p>On est au 26 rue d'Endoume, à Marseille 7e. Pour savoir ce qu'il y a de beau aujourd'hui ou préparer votre passage, le plus simple reste de nous appeler.</p>
-          <div class="facts">
-            <span><b>Adresse</b> — {{nap.streetAddress}}, {{nap.postalCode}} {{nap.addressLocality}}</span>
-            <span><b>Horaires</b> — du lundi au dimanche, 7h00 à 20h30</span>
-            <span><b>Téléphone</b> — {{nap.phoneDisplay}}</span>
-          </div>
+          <h2 id="contact-titre">Ouvert tous les jours, de 7h à 20h30</h2>
+          <p>Pour savoir ce qu'il y a de beau aujourd'hui ou préparer votre passage, le plus simple reste de nous appeler.</p>
+          <dl class="infos">
+            <div><dt>Adresse</dt><dd>{{nap.streetAddress}}<br>{{nap.postalCode}} {{nap.addressLocality}}</dd></div>
+            <div><dt>Horaires</dt><dd>Du lundi au dimanche<br>de 7h à 20h30</dd></div>
+            <div><dt>Téléphone</dt><dd><a href="tel:{{nap.phoneLink}}">{{nap.phoneDisplay}}</a></dd></div>
+          </dl>
         </div>
-        <div>
-          <div class="actions">
-            <a class="call" href="tel:{{nap.phoneLink}}" aria-label="Appeler la boutique au {{nap.phoneDisplay}}">{{nap.phoneDisplay}}</a>
-            <a class="textlink" href="{{nap.mapsDirUrl}}" target="_blank" rel="noopener">Itinéraire</a>
-          </div>
-        </div>
+        <div class="contact-acts"><a class="btn" href="tel:{{nap.phoneLink}}">Appeler la boutique</a><a class="lien lien--clair" href="{{nap.mapsDirUrl}}" target="_blank" rel="noopener">Itinéraire</a></div>
       </div>
     </section>

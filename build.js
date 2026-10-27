@@ -46,7 +46,7 @@ const prefix = (data.site.pathPrefix || '').replace(/\/$/, ''); // ex: "/terre-d
 function applyPrefix(html) {
   if (!prefix) return html;
   return html
-    .replace(/\b(href|src)="\/(?!\/)/g, `$1="${prefix}/`)
+    .replace(/\b(href|src|data-href)="\/(?!\/)/g, `$1="${prefix}/`)
     .replace(/\bsrcset="([^"]*)"/g, (m, v) => `srcset="${v.replace(/(^|,\s*)\/(?!\/)/g, `$1${prefix}/`)}"`);
 }
 const pageUrl = (key) => {
@@ -62,6 +62,15 @@ function navHtml(currentKey) {
     const active = key === currentKey;
     return `<li><a href="${href}"${active ? ' aria-current="page" class="is-active"' : ''}>${p.navLabel}</a></li>`;
   }).join('\n          ');
+}
+// Nav de l'en-tête : exclut l'accueil (le logo renvoie à l'accueil), avec état actif.
+function navHeaderHtml(currentKey) {
+  return data.nav.filter((key) => key !== 'accueil').map((key) => {
+    const p = data.pages[key];
+    const href = '/' + p.slug + '/';
+    const active = key === currentKey;
+    return `<a href="${href}"${active ? ' aria-current="page" class="is-active"' : ''}>${p.navLabel}</a>`;
+  }).join('');
 }
 function footerNavHtml() {
   return data.nav.map((key) => {
@@ -109,6 +118,16 @@ function localBusinessJsonld() {
   }
   return JSON.stringify(obj);
 }
+function faqJsonld() {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: (data.faq || []).map((f) => ({
+      '@type': 'Question', name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a }
+    }))
+  });
+}
 function breadcrumbJsonld(key) {
   const p = data.pages[key];
   const items = [{ name: 'Accueil', url: baseUrl + '/' }];
@@ -138,9 +157,12 @@ for (const key of Object.keys(data.pages)) {
   const bodyFile = path.join(SRC, 'pages', key + '.html');
   if (!fs.existsSync(bodyFile)) { console.warn('! page manquante : ' + key); continue; }
 
-  const jsonld =
+  let jsonld =
     `<script type="application/ld+json">${localBusinessJsonld()}</script>\n` +
     `  <script type="application/ld+json">${breadcrumbJsonld(key)}</script>`;
+  if (key === 'accueil' && data.faq && data.faq.length) {
+    jsonld += `\n  <script type="application/ld+json">${faqJsonld()}</script>`;
+  }
 
   const ctx = {
     site: data.site, nap: data.nap, hours: data.hours, legal: data.legal,
@@ -150,6 +172,7 @@ for (const key of Object.keys(data.pages)) {
     robots: p.noindex ? 'noindex, follow' : 'index, follow',
     bodyClass: 'page-' + (p.slug || 'accueil'),
     nav: navHtml(key),
+    navHeader: navHeaderHtml(key),
     footerNav: footerNavHtml(),
     legalLinks: legalLinksHtml(),
     jsonld

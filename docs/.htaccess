@@ -1,3 +1,6 @@
+# Type MIME AVIF (images des cartes rayons)
+AddType image/avif .avif
+
 # ============================================================
 # Terre de Provence — configuration Apache (Hostinger)
 # (GitHub Pages ignore ce fichier ; il ne sert qu'en production.)
@@ -36,6 +39,7 @@ ErrorDocument 404 /404.html
   ExpiresActive On
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
@@ -43,7 +47,7 @@ ErrorDocument 404 /404.html
   ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
 <IfModule mod_headers.c>
-  <FilesMatch "\.(css|js|webp|png|jpe?g|ico|woff2)$">
+  <FilesMatch "\.(css|js|avif|webp|png|jpe?g|ico|woff2)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
   <FilesMatch "\.html$">

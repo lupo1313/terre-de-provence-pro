@@ -45,6 +45,13 @@
     "host": "À VÉRIFIER",
     "mediator": "À VÉRIFIER"
   },
+  "faq": [
+    { "q": "Quels sont vos horaires d'ouverture ?", "a": "La boutique est ouverte tous les jours, du lundi au dimanche, de 7h à 20h30." },
+    { "q": "Où se trouve la boutique ?", "a": "Au 26 rue d'Endoume, dans le 7e arrondissement de Marseille, au cœur du quartier d'Endoume." },
+    { "q": "Comment savoir si un produit est disponible ?", "a": "Les arrivages changent avec les saisons. Le plus simple est d'appeler la boutique au 04 91 33 85 68." },
+    { "q": "Que trouve-t-on chez Terre de Provence ?", "a": "Des fruits et légumes de saison, des fromages à la coupe et en libre-service, des olives au détail, de l'épicerie fine, des produits secs et des jus de fruits." },
+    { "q": "Depuis quand la boutique existe-t-elle ?", "a": "Depuis plus de trente ans, à la même adresse de la rue d'Endoume. Elle s'appelait autrefois « La Clé des Champs »." }
+  ],
   "nav": ["accueil", "notre-histoire", "nos-produits", "la-boutique", "nous-trouver"],
   "footerExtra": ["mentions-legales", "politique-confidentialite"],
   "pages": {

@@ -1,41 +1,14 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div class="footer-brand">
-        <img src="/assets/img/logo-horizontal-creme.webp" alt="Terre de Provence" width="190" height="52" loading="lazy">
-        <p class="footer-tag">Primeur &amp; épicerie fine</p>
-        <p class="footer-note">Commerce de quartier à Endoume, Marseille, depuis plus de 30 ans.</p>
+    <div class="wrap footer-grille">
+      <div class="footer-marque">
+        <img src="/assets/img/logo-horizontal-creme.webp" alt="Terre de Provence" width="2167" height="726" loading="lazy">
+        <p>Primeur et épicerie fine, commerce de quartier à Endoume depuis plus de trente ans.</p>
       </div>
-
-      <nav class="footer-col" aria-label="Pages du site">
-        <h2>Le site</h2>
-        <ul>
-          {{footerNav}}
-        </ul>
-      </nav>
-
-      <div class="footer-col">
-        <h2>Nous trouver</h2>
-        <address>
-          {{nap.streetAddress}}<br>
-          {{nap.postalCode}} {{nap.addressLocality}}<br>
-          <a href="tel:{{nap.phoneLink}}">{{nap.phoneDisplay}}</a>
-        </address>
-        <p class="footer-hours">Tous les jours, 7h00 – 20h30</p>
-        <a class="footer-maps" href="{{nap.mapsDirUrl}}" target="_blank" rel="noopener">Voir l'itinéraire →</a>
-      </div>
-
-      <nav class="footer-col" aria-label="Informations légales">
-        <h2>Informations</h2>
-        <ul>
-          {{legalLinks}}
-        </ul>
-      </nav>
+      <nav aria-label="Pages du site"><h2>Le site</h2><ul>{{footerNav}}</ul></nav>
+      <div><h2>Nous trouver</h2><p>{{nap.streetAddress}}<br>{{nap.postalCode}} {{nap.addressLocality}}<br><a href="tel:{{nap.phoneLink}}">{{nap.phoneDisplay}}</a><br>Tous les jours, 7h à 20h30</p></div>
+      <nav aria-label="Informations légales"><h2>Informations</h2><ul>{{legalLinks}}</ul></nav>
     </div>
-
-    <div class="wrap footer-bottom">
-      <p>© {{year}} {{site.name}} — Tous droits réservés.</p>
-      <p>26 rue d'Endoume, Marseille 7e</p>
-    </div>
+    <div class="wrap footer-bas">© {{year}} {{site.name}}</div>
   </footer>

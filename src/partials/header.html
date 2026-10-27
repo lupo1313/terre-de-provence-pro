@@ -1,29 +1,9 @@
-  <header class="site-header" id="site-header">
+  <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="/" aria-label="Terre de Provence, accueil">
-        <img src="/assets/img/logo-principal.webp" alt="Terre de Provence" width="150" height="56" class="brand-logo">
-      </a>
-
-      <nav class="main-nav" aria-label="Navigation principale">
-        <ul>
-          {{nav}}
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <a class="header-call" href="tel:{{nap.phoneLink}}">✆ {{nap.phoneDisplay}} <span>Appeler</span></a>
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <a class="brand" href="/" aria-label="Terre de Provence, accueil"><img src="/assets/img/logo-horizontal-creme.webp" alt="Terre de Provence" width="2167" height="726"></a>
+      <nav class="main-nav" aria-label="Navigation principale">{{navHeader}}</nav>
+      <a class="tel" href="tel:{{nap.phoneLink}}">{{nap.phoneDisplay}}</a>
     </div>
-
-    <nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile" hidden>
-      <ul>
-        {{nav}}
-      </ul>
-      <a class="call mobile-nav-call" href="tel:{{nap.phoneLink}}" aria-label="Appeler la boutique au {{nap.phoneDisplay}}">{{nap.phoneDisplay}}</a>
-    </nav>
   </header>
 
   <main id="contenu">
