@@ -4,6 +4,7 @@
     "tagline": "Primeur & épicerie fine à Endoume, Marseille",
     "baseUrl": "https://lupo1313.github.io/terre-de-provence-pro",
     "pathPrefix": "/terre-de-provence-pro",
+    "prod": { "baseUrl": "https://REMPLACER-PAR-DOMAINE", "pathPrefix": "" },
     "locale": "fr_FR",
     "lang": "fr",
     "themeColor": "#00261B"

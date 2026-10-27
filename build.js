@@ -6,11 +6,29 @@
  */
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const ROOT = __dirname;
 const SRC = path.join(ROOT, 'src');
-const OUT = path.join(ROOT, 'docs');
 const data = JSON.parse(fs.readFileSync(path.join(SRC, 'data', 'site.json'), 'utf8'));
+
+// `node build.js`        -> docs/  (test GitHub Pages, sous-chemin)
+// `node build.js --prod` -> dist/  (production : domaine réel, racine)
+const isProd = process.argv.includes('--prod');
+const OUT = path.join(ROOT, isProd ? 'dist' : 'docs');
+
+// Empreinte du CSS/JS pour le cache-busting (indispensable avec un cache long sur Hostinger)
+function hashFile(p) {
+  try { return crypto.createHash('md5').update(fs.readFileSync(p)).digest('hex').slice(0, 10); }
+  catch (e) { return 'dev'; }
+}
+const cssVer = hashFile(path.join(SRC, 'assets', 'css', 'styles.css'));
+const jsVer = hashFile(path.join(SRC, 'assets', 'js', 'main.js'));
+function bustCache(html) {
+  return html
+    .replace(/assets\/css\/styles\.css(?=")/g, 'assets/css/styles.css?v=' + cssVer)
+    .replace(/assets\/js\/main\.js(?=")/g, 'assets/js/main.js?v=' + jsVer);
+}
 
 const read = (p) => fs.readFileSync(p, 'utf8');
 const partial = (name) => read(path.join(SRC, 'partials', name + '.html'));
@@ -39,8 +57,9 @@ function copyDir(from, to, skip = []) {
   }
 }
 
-const baseUrl = data.site.baseUrl.replace(/\/$/, '');
-const prefix = (data.site.pathPrefix || '').replace(/\/$/, ''); // ex: "/terre-de-provence-pro" pour un sous-chemin GitHub Pages
+const prodCfg = isProd ? (data.site.prod || {}) : {};
+const baseUrl = (prodCfg.baseUrl || data.site.baseUrl).replace(/\/$/, '');
+const prefix = ((isProd ? (prodCfg.pathPrefix || '') : (data.site.pathPrefix || ''))).replace(/\/$/, ''); // sous-chemin GitHub Pages (vide en prod racine)
 
 // Préfixe les URLs racine (href/src/srcset commençant par "/") pour un déploiement en sous-dossier.
 function applyPrefix(html) {
@@ -188,7 +207,7 @@ for (const key of Object.keys(data.pages)) {
   };
 
   const body = fill(read(bodyFile), ctx);
-  const full = applyPrefix(fill([head, header, body, footer, scripts].join('\n'), ctx));
+  const full = bustCache(applyPrefix(fill([head, header, body, footer, scripts].join('\n'), ctx)));
 
   let outPath;
   if (key === '404') outPath = path.join(OUT, '404.html');
@@ -218,5 +237,6 @@ fs.writeFileSync(path.join(OUT, 'sitemap.xml'), sitemap, 'utf8');
 fs.writeFileSync(path.join(OUT, 'robots.txt'),
   `User-agent: *\nAllow: /\n\nSitemap: ${baseUrl}/sitemap.xml\n`, 'utf8');
 
-console.log(`✓ Build terminé : ${built} pages -> docs/`);
-console.log(`  Rappel : définir site.baseUrl dans src/data/site.json avant déploiement (actuel : ${baseUrl}).`);
+console.log(`✓ Build ${isProd ? 'PROD' : 'test'} : ${built} pages -> ${path.basename(OUT)}/ (css v=${cssVer}, js v=${jsVer})`);
+console.log(`  baseUrl = ${baseUrl}${prefix ? ' · sous-chemin ' + prefix : ' · racine'}`);
+if (isProd && /REMPLACER/.test(baseUrl)) console.log('  ⚠ Renseigne site.prod.baseUrl (domaine réel) avant de téléverser dist/.');

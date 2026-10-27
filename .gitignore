@@ -1,6 +1,9 @@
 # Staging de conversion d'images (sources lourdes, non nécessaires au site)
 src/assets/img/_raw/
 
+# Build de production (généré à la demande pour Hostinger, contient le domaine réel)
+dist/
+
 # Divers
 .DS_Store
 Thumbs.db
