@@ -89,7 +89,7 @@
     </section>
 
     <section class="contact" aria-labelledby="contact-titre">
-      <div class="wrap contact-inner">
+      <div class="wrap contact-grid">
         <div>
           <h2 id="contact-titre">Ouvert tous les jours, de 7h à 20h30</h2>
           <p>Pour savoir ce qu'il y a de beau aujourd'hui ou préparer votre passage, le plus simple reste de nous appeler.</p>
@@ -98,7 +98,13 @@
             <div><dt>Horaires</dt><dd>Du lundi au dimanche<br>de 7h à 20h30</dd></div>
             <div><dt>Téléphone</dt><dd><a href="tel:{{nap.phoneLink}}">{{nap.phoneDisplay}}</a></dd></div>
           </dl>
+          <div class="contact-acts"><a class="btn" href="tel:{{nap.phoneLink}}">Appeler la boutique</a><a class="lien lien--clair" href="{{nap.mapsDirUrl}}" target="_blank" rel="noopener">Itinéraire</a></div>
         </div>
-        <div class="contact-acts"><a class="btn" href="tel:{{nap.phoneLink}}">Appeler la boutique</a><a class="lien lien--clair" href="{{nap.mapsDirUrl}}" target="_blank" rel="noopener">Itinéraire</a></div>
+        <div class="map-embed">
+          <div class="map-consent">
+            <p>La carte Google Maps n'est chargée qu'après votre clic (aucune donnée n'est transmise avant).</p>
+            <button class="btn" type="button" data-map-load data-map-query="26 rue d'Endoume 13007 Marseille">Afficher la carte</button>
+          </div>
+        </div>
       </div>
     </section>

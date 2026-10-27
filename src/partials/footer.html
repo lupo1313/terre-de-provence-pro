@@ -8,7 +8,9 @@
       </div>
       <nav aria-label="Pages du site"><h2>Le site</h2><ul>{{footerNav}}</ul></nav>
       <div><h2>Nous trouver</h2><p>{{nap.streetAddress}}<br>{{nap.postalCode}} {{nap.addressLocality}}<br><a href="tel:{{nap.phoneLink}}">{{nap.phoneDisplay}}</a><br>Tous les jours, 7h à 20h30</p></div>
-      <nav aria-label="Informations légales"><h2>Informations</h2><ul>{{legalLinks}}</ul></nav>
     </div>
-    <div class="wrap footer-bas">© {{year}} {{site.name}}</div>
+    <div class="wrap footer-bas">
+      <ul class="footer-legal">{{legalLinks}}</ul>
+      <span>© {{year}} {{site.name}}</span>
+    </div>
   </footer>
