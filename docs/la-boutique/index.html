@@ -31,19 +31,20 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="/terre-de-provence-pro/" aria-label="Terre de Provence, accueil"><img src="/terre-de-provence-pro/assets/img/logo-horizontal-creme.webp" alt="Terre de Provence" width="2167" height="726"></a>
-      <nav class="main-nav" aria-label="Navigation principale"><a href="/terre-de-provence-pro/notre-histoire/">Notre histoire</a><a href="/terre-de-provence-pro/nos-produits/">Nos produits</a><a href="/terre-de-provence-pro/la-boutique/" aria-current="page" class="is-active">La boutique</a><a href="/terre-de-provence-pro/nous-trouver/">Nous trouver</a></nav>
+      <nav class="main-nav" aria-label="Navigation principale"><a href="/terre-de-provence-pro/notre-histoire/">Notre histoire</a><div class="has-sub"><a href="/terre-de-provence-pro/nos-produits/" aria-haspopup="true">Nos produits</a><div class="submenu"><a href="/terre-de-provence-pro/nos-produits/#fruits-legumes">Fruits et légumes</a><a href="/terre-de-provence-pro/nos-produits/#fromages">Fromages</a><a href="/terre-de-provence-pro/nos-produits/#olives">Olives</a><a href="/terre-de-provence-pro/nos-produits/#epicerie-fine">Épicerie fine</a><a href="/terre-de-provence-pro/nos-produits/#produits-secs">Produits secs</a><a href="/terre-de-provence-pro/nos-produits/#jus">Jus</a></div></div><a href="/terre-de-provence-pro/la-boutique/" aria-current="page" class="is-active">La boutique</a><a href="/terre-de-provence-pro/nous-trouver/">Nous trouver</a></nav>
       <a class="tel" href="tel:+33491338568">04 91 33 85 68</a>
       <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
     </div>
-    <nav class="menu-mobile" id="menu-mobile" aria-label="Menu" hidden>
-      <ul><li><a href="/terre-de-provence-pro/">Accueil</a></li>
+  </header>
+
+  <nav class="menu-mobile" id="menu-mobile" aria-label="Menu principal" hidden>
+    <ul><li><a href="/terre-de-provence-pro/">Accueil</a></li>
           <li><a href="/terre-de-provence-pro/notre-histoire/">Notre histoire</a></li>
-          <li><a href="/terre-de-provence-pro/nos-produits/">Nos produits</a></li>
+          <li><details class="m-sub"><summary>Nos produits<span class="acc-ico" aria-hidden="true">+</span></summary><div class="m-sublist"><a href="/terre-de-provence-pro/nos-produits/">Tous nos produits</a><a href="/terre-de-provence-pro/nos-produits/#fruits-legumes">Fruits et légumes</a><a href="/terre-de-provence-pro/nos-produits/#fromages">Fromages</a><a href="/terre-de-provence-pro/nos-produits/#olives">Olives</a><a href="/terre-de-provence-pro/nos-produits/#epicerie-fine">Épicerie fine</a><a href="/terre-de-provence-pro/nos-produits/#produits-secs">Produits secs</a><a href="/terre-de-provence-pro/nos-produits/#jus">Jus</a></div></details></li>
           <li><a href="/terre-de-provence-pro/la-boutique/" aria-current="page" class="is-active">La boutique</a></li>
           <li><a href="/terre-de-provence-pro/nous-trouver/">Nous trouver</a></li></ul>
-      <a class="btn menu-mobile-call" href="tel:+33491338568">Appeler le 04 91 33 85 68</a>
-    </nav>
-  </header>
+    <a class="btn menu-mobile-call" href="tel:+33491338568">Appeler le 04 91 33 85 68</a>
+  </nav>
 
   <main id="contenu">
 
@@ -103,12 +104,18 @@
         <img src="/terre-de-provence-pro/assets/img/logo-horizontal-creme.webp" alt="Terre de Provence" width="2167" height="726" loading="lazy">
         <p>Primeur et épicerie fine, commerce de quartier à Endoume depuis plus de trente ans.</p>
       </div>
-      <nav aria-label="Pages du site"><h2>Le site</h2><ul><li><a href="/terre-de-provence-pro/">Accueil</a></li>
+      <details class="footer-acc">
+        <summary><h2>Le site</h2><span class="acc-ico" aria-hidden="true">+</span></summary>
+        <ul><li><a href="/terre-de-provence-pro/">Accueil</a></li>
           <li><a href="/terre-de-provence-pro/notre-histoire/">Notre histoire</a></li>
           <li><a href="/terre-de-provence-pro/nos-produits/">Nos produits</a></li>
           <li><a href="/terre-de-provence-pro/la-boutique/">La boutique</a></li>
-          <li><a href="/terre-de-provence-pro/nous-trouver/">Nous trouver</a></li></ul></nav>
-      <div><h2>Nous trouver</h2><p>26 rue d'Endoume<br>13007 Marseille<br><a href="tel:+33491338568">04 91 33 85 68</a><br>Tous les jours, 7h à 20h30</p></div>
+          <li><a href="/terre-de-provence-pro/nous-trouver/">Nous trouver</a></li></ul>
+      </details>
+      <details class="footer-acc">
+        <summary><h2>Nous trouver</h2><span class="acc-ico" aria-hidden="true">+</span></summary>
+        <p>26 rue d'Endoume<br>13007 Marseille<br><a href="tel:+33491338568">04 91 33 85 68</a><br>Tous les jours, 7h à 20h30</p>
+      </details>
     </div>
     <div class="wrap footer-bas">
       <ul class="footer-legal"><li><a href="/terre-de-provence-pro/mentions-legales/">Mentions légales</a></li>

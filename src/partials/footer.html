@@ -6,8 +6,14 @@
         <img src="/assets/img/logo-horizontal-creme.webp" alt="Terre de Provence" width="2167" height="726" loading="lazy">
         <p>Primeur et épicerie fine, commerce de quartier à Endoume depuis plus de trente ans.</p>
       </div>
-      <nav aria-label="Pages du site"><h2>Le site</h2><ul>{{footerNav}}</ul></nav>
-      <div><h2>Nous trouver</h2><p>{{nap.streetAddress}}<br>{{nap.postalCode}} {{nap.addressLocality}}<br><a href="tel:{{nap.phoneLink}}">{{nap.phoneDisplay}}</a><br>Tous les jours, 7h à 20h30</p></div>
+      <details class="footer-acc">
+        <summary><h2>Le site</h2><span class="acc-ico" aria-hidden="true">+</span></summary>
+        <ul>{{footerNav}}</ul>
+      </details>
+      <details class="footer-acc">
+        <summary><h2>Nous trouver</h2><span class="acc-ico" aria-hidden="true">+</span></summary>
+        <p>{{nap.streetAddress}}<br>{{nap.postalCode}} {{nap.addressLocality}}<br><a href="tel:{{nap.phoneLink}}">{{nap.phoneDisplay}}</a><br>Tous les jours, 7h à 20h30</p>
+      </details>
     </div>
     <div class="wrap footer-bas">
       <ul class="footer-legal">{{legalLinks}}</ul>

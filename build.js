@@ -55,12 +55,18 @@ const pageUrl = (key) => {
 };
 
 // --- generated fragments ---------------------------------------------------
+function rayonLinks() {
+  return (data.rayons || []).map((r) => `<a href="/nos-produits/#${r.anchor}">${r.label}</a>`).join('');
+}
 function navHtml(currentKey) {
   return data.nav.map((key) => {
     const p = data.pages[key];
     const href = p.slug ? '/' + p.slug + '/' : '/';
-    const active = key === currentKey;
-    return `<li><a href="${href}"${active ? ' aria-current="page" class="is-active"' : ''}>${p.navLabel}</a></li>`;
+    const active = key === currentKey ? ' aria-current="page" class="is-active"' : '';
+    if (key === 'nos-produits' && data.rayons && data.rayons.length) {
+      return `<li><details class="m-sub"><summary>${p.navLabel}<span class="acc-ico" aria-hidden="true">+</span></summary><div class="m-sublist"><a href="${href}"${active}>Tous nos produits</a>${rayonLinks()}</div></details></li>`;
+    }
+    return `<li><a href="${href}"${active}>${p.navLabel}</a></li>`;
   }).join('\n          ');
 }
 // Nav de l'en-tête : exclut l'accueil (le logo renvoie à l'accueil), avec état actif.
@@ -68,8 +74,11 @@ function navHeaderHtml(currentKey) {
   return data.nav.filter((key) => key !== 'accueil').map((key) => {
     const p = data.pages[key];
     const href = '/' + p.slug + '/';
-    const active = key === currentKey;
-    return `<a href="${href}"${active ? ' aria-current="page" class="is-active"' : ''}>${p.navLabel}</a>`;
+    const active = key === currentKey ? ' aria-current="page" class="is-active"' : '';
+    if (key === 'nos-produits' && data.rayons && data.rayons.length) {
+      return `<div class="has-sub"><a href="${href}"${active} aria-haspopup="true">${p.navLabel}</a><div class="submenu">${rayonLinks()}</div></div>`;
+    }
+    return `<a href="${href}"${active}>${p.navLabel}</a>`;
   }).join('');
 }
 function footerNavHtml() {

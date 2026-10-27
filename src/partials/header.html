@@ -5,10 +5,11 @@
       <a class="tel" href="tel:{{nap.phoneLink}}">{{nap.phoneDisplay}}</a>
       <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
     </div>
-    <nav class="menu-mobile" id="menu-mobile" aria-label="Menu" hidden>
-      <ul>{{nav}}</ul>
-      <a class="btn menu-mobile-call" href="tel:{{nap.phoneLink}}">Appeler le {{nap.phoneDisplay}}</a>
-    </nav>
   </header>
+
+  <nav class="menu-mobile" id="menu-mobile" aria-label="Menu principal" hidden>
+    <ul>{{nav}}</ul>
+    <a class="btn menu-mobile-call" href="tel:{{nap.phoneLink}}">Appeler le {{nap.phoneDisplay}}</a>
+  </nav>
 
   <main id="contenu">

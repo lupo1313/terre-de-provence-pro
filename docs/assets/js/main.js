@@ -11,6 +11,7 @@
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
       panel.hidden = !open;
+      document.body.classList.toggle('menu-open', open);
     }
     toggle.addEventListener('click', function () { set(toggle.getAttribute('aria-expanded') !== 'true'); });
     panel.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });

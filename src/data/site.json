@@ -52,6 +52,14 @@
     { "q": "Que trouve-t-on chez Terre de Provence ?", "a": "Des fruits et légumes de saison, des fromages à la coupe et en libre-service, des olives au détail, de l'épicerie fine, des produits secs et des jus de fruits." },
     { "q": "Depuis quand la boutique existe-t-elle ?", "a": "Depuis plus de trente ans, à la même adresse de la rue d'Endoume. Elle s'appelait autrefois « La Clé des Champs »." }
   ],
+  "rayons": [
+    { "label": "Fruits et légumes", "anchor": "fruits-legumes" },
+    { "label": "Fromages", "anchor": "fromages" },
+    { "label": "Olives", "anchor": "olives" },
+    { "label": "Épicerie fine", "anchor": "epicerie-fine" },
+    { "label": "Produits secs", "anchor": "produits-secs" },
+    { "label": "Jus", "anchor": "jus" }
+  ],
   "nav": ["accueil", "notre-histoire", "nos-produits", "la-boutique", "nous-trouver"],
   "footerExtra": ["mentions-legales", "politique-confidentialite"],
   "pages": {
