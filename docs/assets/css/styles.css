@@ -13,8 +13,7 @@
    base.css
    ============================================================ */
 :root{
-  --vert:#123D2F; --vert-d:#0B2A20; --or:#C9A24B; --or-l:#E2C77F;
-  --terra:#B4512E; --terra-d:#9C4324;
+  --vert:#123D2F; --vert-d:#0B2A20; --or:#C9A24B; --or-l:#E2C77F; --or-d:#A9832F;
   --pierre:#F1F0EB; --pierre-2:#E7E5DC; --encre:#1F2622; --muted:#5E6660; --filet:#CFC7B0;
   --rbtn:7px;
   --serif:Bodoni,"Bodoni 72",Didot,Georgia,serif; --sans:Inst,system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -37,8 +36,8 @@ p{margin:0}
 .lien{color:var(--vert);font-weight:600;text-decoration:underline;text-decoration-color:var(--or);text-underline-offset:6px;text-decoration-thickness:1px}
 .lien:hover{text-decoration-thickness:2px}
 .lien--clair{color:var(--pierre)}
-.btn{display:inline-flex;align-items:center;min-height:48px;background:var(--terra);color:#fff;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:var(--rbtn);font-size:17px;transition:background-color .18s}
-.btn:hover{background:var(--terra-d)}
+.btn{display:inline-flex;align-items:center;min-height:48px;background:var(--or);color:var(--vert-d);text-decoration:none;font-weight:600;padding:13px 26px;border-radius:var(--rbtn);font-size:17px;transition:background-color .18s}
+.btn:hover{background:var(--or-l)}
 
 /* header */
 .site-header{background:var(--vert);color:var(--pierre);position:sticky;top:0;z-index:300}
@@ -76,8 +75,8 @@ p{margin:0}
 .menu-mobile .m-sublist{display:flex;flex-direction:column;padding:2px 0 10px 16px}
 .menu-mobile .m-sublist a{padding:12px 0;font-family:var(--serif);font-style:italic;font-size:17px;color:#CBD3CD;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06)}
 .menu-mobile .m-sublist a:last-child{border-bottom:0}
-.menu-mobile .menu-mobile-call{display:flex;width:100%;justify-content:center;align-items:center;margin:24px 0 8px;font-family:var(--sans);font-style:normal;font-weight:600;font-size:16px;border-bottom:0;color:#fff;background:var(--terra);padding:15px 20px;border-radius:var(--rbtn)}
-.menu-mobile .menu-mobile-call:hover{background:var(--terra-d)}
+.menu-mobile .menu-mobile-call{display:flex;width:100%;justify-content:center;align-items:center;margin:24px 0 8px;font-family:var(--sans);font-style:normal;font-weight:600;font-size:16px;border-bottom:0;color:var(--vert-d);background:var(--or);padding:15px 20px;border-radius:var(--rbtn)}
+.menu-mobile .menu-mobile-call:hover{background:var(--or-l)}
 body.menu-open{overflow:hidden}
 
 @media (max-width:760px){
@@ -283,10 +282,10 @@ h3{font-family:var(--serif);font-weight:500;color:var(--vert);line-height:1.1;ma
 .textlink:hover{text-decoration-thickness:2px}
 .hero-actions,.actions{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-top:26px}
 .card-actions{margin-top:20px}
-.call{display:inline-flex;align-items:center;min-height:48px;background:var(--terra);color:#fff;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:var(--rbtn);font-size:17px;transition:background-color .18s}
-.call:hover{background:var(--terra-d)}
-.btn--ghost{display:inline-flex;align-items:center;min-height:48px;border:1px solid var(--filet);color:var(--vert);padding:13px 24px;border-radius:var(--rbtn);text-decoration:none;font-weight:600;background:transparent}
-.btn--ghost:hover{background:rgba(18,61,47,.05)}
+.call{display:inline-flex;align-items:center;min-height:48px;background:var(--or);color:var(--vert-d);text-decoration:none;font-weight:600;padding:13px 26px;border-radius:var(--rbtn);font-size:17px;transition:background-color .18s}
+.call:hover{background:var(--or-l)}
+.btn--ghost{display:inline-flex;align-items:center;min-height:48px;border:1px solid var(--or);color:var(--vert);padding:13px 24px;border-radius:var(--rbtn);text-decoration:none;font-weight:600;background:transparent}
+.btn--ghost:hover{background:rgba(201,162,75,.12)}
 .btn--solid{display:inline-flex;align-items:center;min-height:48px;background:var(--vert);color:var(--pierre);padding:13px 24px;border-radius:var(--rbtn);text-decoration:none;font-weight:600}
 .btn--solid:hover{background:var(--vert-d)}
 
