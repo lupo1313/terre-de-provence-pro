@@ -193,7 +193,7 @@ for (const key of Object.keys(data.pages)) {
   }
 
   const ctx = {
-    site: data.site, nap: data.nap, hours: data.hours, legal: data.legal,
+    site: data.site, nap: data.nap, hours: data.hours, legal: data.legal, delivery: data.delivery,
     page: p, year,
     canonical: pageUrl(key),
     ogImage: baseUrl + (p.ogImage || ''),

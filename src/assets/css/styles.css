@@ -147,6 +147,7 @@ body.menu-open{overflow:hidden}
 .infos dt{font-family:var(--serif);color:var(--or-l);font-size:17px}
 .infos dd{margin:4px 0 0;color:#E6EAE6}
 .infos a{color:inherit;text-decoration:none}
+.contact .livraison-note{margin-top:14px;color:var(--or-l);max-width:40rem}
 
 /* FAQ */
 .faq{padding-block:var(--section);border-top:1px solid var(--filet)}
